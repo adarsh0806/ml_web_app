@@ -1,0 +1,45 @@
+
+body{
+	width:600px;
+	font-family: Courier, "Lucida Console", monospace; 
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+}
+
+.ai-area {
+    font-size: 15px;
+    color: gray;
+    
+    top: 10px;
+    right: 10px;
+    font-family: Courier, "Lucida Console", monospace; 
+}
+
+input[type=submit] {
+  font-size: 24px;
+  font-family: Courier, "Lucida Console", monospace; 
+}
+
+.main-title {
+    display: block;
+    color: #222;
+    font-size: 40px; 
+    font-family: Courier, "Lucida Console", monospace;  
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.button{
+	padding-top: 20px;
+	font-family: Courier, "Lucida Console", monospace; 
+}
+
+.submit_btn{
+	padding-top: 20px;
+	font-family: Courier, "Lucida Console", monospace; 
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mr Robot Review Classification</title>
+	
+	<link type="text/css" rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body bgcolor = '#dee0dd'>
+  
+  <h3>Your Mr Robot review:</h3>
+  
+  <div>{{ content }}</div>
+
+  <h3 class="main-title">My Prediction:</h3>
+  
+  <div class="ai-area">My AI brain tells me your review is <strong>{{ prediction }}</strong>
+	 (probability: {{ probability }}%).
+  <br>
+  <br>
+  Was I right? Please let me know so I can improve my algorithm.
+    </div>
+  <br>
+
+ <div id='button'>
+	  <form action="/thanks" method="post">
+	    <input type=submit value='Correct' name='feedback_button'>
+		<input type=submit value='Incorrect' name='feedback_button'>
+		<input type=hidden value='{{ prediction }}' name='prediction'>
+		<input type=hidden value='{{ content }}' name='review'>
+	  </form>
+</div>
+<br>
+<div class="ai-area">
+If you don't want to let me know because you are afraid that once I understand human emotions I will use it against you, you can leave me here by clicking the button below. 
+</div>
+<br>
+
+<div id='button'>
+	  <form action="/">
+	    <input type=submit value='I am afraid of Artificial Intelligence'>
+	  </form>
+</div>
+
+  </body>
+</html>

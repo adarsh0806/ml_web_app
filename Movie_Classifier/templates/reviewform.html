@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mr Robot</title>
+	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+	<link type="text/css" rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body bgcolor = '#dee0dd'>
+  <h2 align = center class="main-title"> Hello friend. </h2>
+  <!-- <img src="http://i.imgur.com/PRnNTYo.png" align = "middle" height = 200 width = 400 > -->
+  <br>
+  <br>
+  <div class="ai-area">
+  I am an AI bot that is learning about human emotions. Tell me how you feel about the Mr Robot
+  series and I will try to tell you if you liked the show(by classifying your feedback as a positive or negative review). I will also tell you how sure I am of my prediction in terms of a percent value. I am not perfect and human emotions are an alien concept to me(I only understand 0s and 1s) so please forgive me if I am wrong. 
+  <br>
+  <br>
+  I am constantly learning and the more reviews I get, the better my accuracy will be in making my predictions. Please be brutally honest. I do not understand sarcasm :( 
+  <br>
+  <h4>What did you think of Mr Robot?</h4>
+  </div>
+{% from "_formhelpers.html" import render_field %}
+
+<form method= post action="/results">
+  <dl>
+	{{ render_field(form.moviereview, cols='100', rows='10') }}
+  </dl>
+  <div>
+	  <input type=submit value='Feed your human emotions to me' name='submit_btn'>
+  </div>
+</form>
+
+  </body>
+</html>
